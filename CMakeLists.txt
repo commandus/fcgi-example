@@ -22,6 +22,6 @@ endif()
 
 link_directories(${VCPKG_LIB})
 
-add_executable(fcgi-example src/fcgi-example.cpp third-party/daemonize.cpp)
+add_executable(fcgi-example fcgi-example.cpp third-party/daemonize.cpp)
 target_link_libraries(fcgi-example PRIVATE ${OS_SPECIFIC_LIBS} fcgi)
 target_include_directories(fcgi-example PRIVATE "." "third-party" ${VCPKG_INC})
